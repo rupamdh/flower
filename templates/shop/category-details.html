@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load my_tags %}
+{% block 'title' %}{{cat.title}} | Flowrist{% endblock 'title' %}
+{% block 'content' %}
+    <div class="inner-banner">
+        <div class="container text-center">
+            <h1 class="mb-2">{{ cat.title }}</h1>
+            <img class="mb-2" src="/static/images/shortwave.png" alt="">
+            <ul class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <i class="fa-thin fa-angles-right"></i>
+                {{cat.id|breadcrumb|safe}}
+                <li><span>{{cat.title}}</span></li>
+            </ul>
+        </div>
+    </div>
+    
+    <section class="pad">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-md-3">
+                    <ul class="cat-sidebar">
+                        {% for category in categories %}
+                            <li class="{% if category.id|has_child %}has-child{% endif %} {% if category.id == cat.id %}active{% endif %}"><a href="{% url 'categories'  slug=category.slug %}">{{ category.title }}</a>
+                                {% with current_id=cat.id %}
+                                    {{ category.id|getchild:current_id|safe }}
+                                {% endwith %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="row g-4">
+                        {% if subcategories %}
+                            {% for subcategory in subcategories %}
+                                <div class="col-md-4 text-center cat-inner">
+                                    <a href="{% url 'categories' slug=subcategory.slug %}">
+                                        <div class="cat-img">
+                                            <img src="/uploads/{{subcategory.image}}" alt="">
+                                        </div>
+                                        <h6>{{subcategory.title}}</h6>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <p>No Sub Category, Product loop</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock 'content' %}
+    

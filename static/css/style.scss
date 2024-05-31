@@ -1,0 +1,691 @@
+$black: #000;
+$white: #fff;
+$purple: #96065b;
+$yellow: #c88f35;
+$deeppurple: #5f4153;
+
+$fontawesome: 'Font Awesome 6 Pro';
+$playfair: "Playfair Display", serif;
+$poppins: "Poppins", sans-serif;
+
+body{
+    margin: 0;
+    padding: 0;
+    color: #111B21;
+    font-family: $poppins;
+    font-size: 15px;
+    position: relative;
+}
+p{
+    color: #111B21;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+h2{
+    font-size: 45px;
+    color: #5e2e4a;
+}
+h3{
+    font-size: 40px;
+}
+h4{
+    font-size: 36px;
+}
+h5{
+    font-size: 30px;
+}
+h6{
+    font-size: 24px;
+}
+h2, h3, h4, h5, h6{
+    font-family: $playfair;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    max-width: 1200px;
+}
+.pad{
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+.btn{
+    border-radius: 40px;
+    padding: 12px 20px;
+    min-width: 170px;
+    border-width: 1px;
+    color: $white;
+}
+
+.btn-purple{
+    background-color: #a1099b;
+    border-color: #a1099b;
+    &:hover{
+        color: #a1099b;
+        background-color: transparent;
+        border-color: #a1099b;
+    }
+}
+
+
+
+/*----------------------------------------------
+#Common
+--------------------------------------------------*/
+.texture-left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.texture-right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+
+.header{
+    padding: 30px 0;
+}
+.head-wp{
+    display: flex;
+    align-items: center;
+    a, p{
+        color: #5e2e4a;
+        font-size: 14px;
+    }
+}
+.head-right{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+.search-btn{
+    border: none;
+    background-color: $purple;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    color: $white;
+    font-size: 20px;
+    @include center();
+    svg path{
+        stroke: $white;
+        stroke-width: 1.5;
+    }
+}
+.count-btn{
+    width: 35px;
+    height: 35px;
+    @include center();
+    position: relative;
+    color: #5e2e4a;
+    border: none;
+    background-color: transparent;
+    font-size: 22px;
+    position: relative;
+    svg path{
+        stroke: #5e2e4a;
+        stroke-width: 1.5;
+    }
+    .count{
+        position: absolute;
+        background-color: #5e2e4a;
+        color: $white;
+        line-height: 1;
+        font-size: 12px;
+        font-weight: 300;
+        width: 15px;
+        height: 15px;
+        @include center();
+        border-radius: 50%;
+        top: 0;
+        right: 0;
+    }
+}
+.login-btn{
+    font-size: 14px;
+    color: #5e2e4a;
+    text-decoration: underline;
+}
+.menu-container{
+    background-color: $white;
+    border-radius: 40px;
+    padding: 5px;
+    margin-top: 40px;
+    position: relative;
+    &::after{
+        content: url(../images/menu-leaves.png);
+        position: absolute;
+        top: -35px;
+        right: -50px;
+        z-index: -1;
+    }
+}
+nav {
+    border: 2px dashed #edd1d5;
+    border-radius: 40px;
+    > ul{
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        margin-bottom: 0;
+        gap: 30px;
+        > li{
+            > a{
+                display: inline-block;
+                color: #5e2e4a;
+                font-weight: 500;
+                padding: 10px 0;
+                &:hover{
+                    color: #c88f35;
+                }
+            }
+        }
+    }
+}
+
+
+/*--------------------------------------------------------------------------------------
+Footer
+------------------------------------------------------------------------------------------*/
+.foot-up{
+    background-image: url(../images/foot-bg.png);
+    background-position: top center;
+    h4{
+        color: #fdeff1;
+        font-weight: 400;
+    }
+    p{
+        color: #cfb0c3;
+    }
+}
+.newsletter{
+    position: relative;
+    input{
+        width: 100%;
+        height: 55px;
+        border: 1px solid #897280;
+        border-radius: 35px;
+        background-color: transparent;
+        outline: none;
+        color: #a68599;
+        padding: 0 20px;
+        &::placeholder{
+            color: #a68599;
+            opacity: 1;
+        }
+    }
+    button{
+        background-color: $yellow;
+        color: $white;
+        font-size: 25px;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 22px;
+    }
+}
+.foot-row{
+    h6{
+        color: #fdeff1;
+        font-size: 20px;
+        font-weight: 400;
+
+    }
+}
+.foot-menu{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    li{
+        margin-bottom: 10px;
+        a{
+            color: #cfb0c3;
+            &:hover{
+                color: $white;
+            }
+        }
+    }
+}
+.foot-bottom{
+    padding: 15px 0;
+    p{
+        font-size: 14px;
+        color: #5e2e4a;
+    }
+}
+
+/*---------------------------------------------------------------------------------------------------------
+#Inner Banner
+----------------------------------------------------------------------------------------------------------*/
+.inner-banner{
+    min-height: 630px;
+    background-image: url(../images/inner-banner.png);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include center();
+    h1{
+        color: $white;
+        font-family: $playfair;
+        text-align: center;
+    }
+}
+
+.breadcrumb{
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    i{
+        font-size: 14px;
+        color: $deeppurple;
+    }
+    li{
+        a{
+            color: $purple;
+            &:hover{
+                color: $deeppurple;
+            }
+        }
+        span{
+            color: $deeppurple;
+        }
+    }
+}
+
+
+
+
+
+/*
+##Home Page
+*/
+body{
+    background-color: #fdeff1; 
+}
+.home-banner{
+    text-align: center;
+    padding-top: 60px;
+    .yellow-bg{
+        width: 580px;
+        height: 580px;
+        background-color: #c88f35;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        .after{
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    .main-img{
+        position: relative;
+    }
+    .line-img{
+        position: absolute;
+        left: 0;
+        top: 34%;
+        z-index: -1;
+        width: 100%;
+    }
+    h2:not(.h1, .sub-title){
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $white;
+        font-weight: 400;
+    }
+    .h1{
+        font-size: 300px;
+        font-weight: 400;
+        color: #96065b;
+        line-height: 1;
+        font-family: $playfair;
+        position: absolute;
+        margin-top: -40px;
+    }
+    .ban-sub{
+        position: absolute;
+        bottom: 350px;
+        left: 50%;
+        transform: translateX(-50%);
+        h2{
+            font-style: italic;
+            color: $purple;
+            font-size: 75px;
+            font-weight: normal;
+            line-height: 1;
+        }
+    }
+    .top{
+        right: 0;
+        z-index: 2;
+    }
+    .bottom{
+        z-index: 2;
+        padding-left: 30px;
+    }
+}
+.category-sec{
+    position: relative;
+    margin-top: -250px;
+}
+@keyframes rotate-right{
+    from {rotate: 0deg;}
+    to {rotate: 360deg;}
+}
+.cat-box{
+    .icn{
+        position: relative;
+        padding: 5px;
+        border-radius: 50%;
+        border: 1px dashed transparent;
+        transition: all .5s ease;
+        margin-bottom: 15px;
+    }
+    .bg{
+        filter: drop-shadow(0 0 10px #cacaca);
+    }
+    .img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+    h6{
+        color: $purple;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    &:hover{
+        .bg{
+            animation: rotate-right 5s linear infinite;
+        }
+        .icn{
+            border: 1px dashed $purple;
+        }
+        h6{
+            color: $yellow;
+        }
+    }
+}
+.best-button-prev,
+.best-button-next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &::after{
+        content: '\e4b2';
+        font-family: $fontawesome;
+        font-weight: 200;
+        color: $purple;
+        font-size: 50px;
+        display: inline-block;
+    }
+}
+.best-button-prev{
+    left: -50px;
+    &::after{
+        rotate: 180deg;
+    }
+}
+.best-button-next{
+    right: -50px;
+}
+.pro-box{
+    max-width: 270px;
+    position: relative;
+    border-radius: 140px 140px 0 0;
+    overflow: hidden;
+    .img{
+        box-shadow: 0 0 10px #ddcccf;
+        margin-bottom: 20px;
+        position: relative;
+        border: 3px solid $white;
+        border-radius: 140px 140px 0 0;
+        overflow: hidden;
+        img{
+            height: 320px;
+            object-fit: cover;
+            border-radius: 140px 140px 0 0;
+        }
+        .action{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #5e2e4a, $alpha: 0.7);
+            left: 0;
+            @include center;
+            bottom: -100%;
+            transition: all .5s ease;
+            .action-btns{
+                display: flex;
+                gap: 10px;
+                a{
+                    background-color: $white;
+                    width: 40px;
+                    height: 40px;
+                    @include center;
+                    border-radius: 50%;
+                    stroke-width: 1.5;
+                    svg path{stroke: #5e2e4a;}
+                }
+            }
+        }
+        &:hover{
+            .action{
+                bottom: 0;
+            }
+        }
+    }
+    .pro-info{
+        text-align: center;
+        .sku{
+            color: #896079;
+        }
+        h6{
+            color: $purple;
+            font-size: 18px;
+        }
+        .price{
+            color: #5e2e4a;
+            font-weight: 500;
+        }
+        a{
+            color: $yellow;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: underline;
+            &:hover{
+                color: $white;
+            }
+        }
+    }
+    .sale{
+        background: #c88f35;
+        color: #fff;
+        padding: 5px 15px 5px 35px;
+        line-height: 1;
+        border-radius: 0 30px 30px 0;
+        display: inline-block;
+        font-weight: 300;
+        position: absolute;
+        top: 45px;
+        left: 0;
+    }
+}
+
+/*--------------------------------------------------------------------------------------
+#Sidebar
+----------------------------------------------------------------------------*/
+.cat-sidebar{
+    list-style: none;
+    padding-left: 0;
+    li{
+        position: relative;
+    }
+    ul{
+        list-style: none;
+        padding-left: 0;
+        display: none;
+        li{
+            position: relative;
+        }
+    }
+    > li {
+        border-bottom: 1px solid #e7cfd3;
+        padding: 20px 0;
+        &:first-child{
+            padding-top: 0;
+            .sub-btn{
+                top: 4px;
+            }
+        }
+        > a{
+            color: $purple;
+            font-family: $playfair;
+            font-size: 24px;
+            &:hover{
+                color: $yellow;
+            }
+        }
+        &.active{
+            > a{color: $yellow;}
+            > ul{
+                display: block;
+            }
+            > .sub-btn::after{
+                content: '\f068';
+                color: $yellow;
+            }
+        }
+        > ul {
+            margin-top: 15px;
+            > li{
+                margin-bottom: 15px;
+                .sub-btn{
+                    top: -2px;
+                }
+                > a{
+                    color: $deeppurple;
+                    font-size: 17px;
+                    &:hover{
+                        color: $purple;
+                    }
+                }
+                &.active{
+                    > a{
+                        color: $purple;
+                    }
+                    > ul{
+                        display: block;
+                    }
+                    > .sub-btn::after{
+                        content: '\f068';
+                        color: $yellow;
+                    }
+                }
+                > ul{
+                    margin-top: 15px;
+                    padding-left: 25px;
+                    list-style: disc;
+                    > li{
+                        margin-bottom: 7px;
+                        &::marker{
+                            color: #d0b3b8;
+                        }
+                        > a{
+                            color: #8a7b84;
+                            &:hover{
+                                color: #a1099b;
+                            }
+                        }
+                        &.active{
+                            &::marker{
+                                color: #a1099b;
+                            }
+                            > a{
+                                color: #a1099b;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.sub-btn{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 24px;
+    right: 0;
+    @include center();
+    color: $deeppurple;
+    cursor: pointer;
+    &::after{
+        content: '\2b';
+        font-family: 'Font Awesome 6 Sharp Solid';
+        font-weight: 600;
+    }
+    &.open{
+        &::after{
+            content: '\f068';
+            color: $yellow;
+        }
+    }
+}
+
+.cat-inner{
+    .cat-img{
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 15px;
+        img{
+            border-radius: 50%;
+            transition: all .5s ease;
+        }
+    }
+    h6{
+        color: $deeppurple;
+        font-size: 22px;
+    }
+    &:hover{
+        h6{
+            color: $yellow;
+        }
+        img{
+            transform: scale(1.2);
+        }
+    }
+}

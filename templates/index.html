@@ -1,0 +1,291 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Home | Flower</title>
+	<link rel="icon" type="image/x-icon" href="/static/images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'fontawesome/css/all.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="home">
+    <img src="{% static 'images/texture-left.png' %}" alt="" class="texture-left">
+    <img src="{% static 'images/texture-right.png' %}" alt="" class="texture-right">
+    
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4">
+                    <div class="head-wp">
+                        <a href="#" class="me-3"><img src="/static/images/wp.png" alt=""></a>
+                        <p><a href="#">Store Location</a> | <a href="#">Track Order</a></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="/static/images/logo.png" alt="">
+                </div>
+                <div class="col-md-4">
+                    <div class="head-right">
+                        <button class="search-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M21.0004 20.9999L16.6504 16.6499" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="count-btn">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.3684 5.27149C20.8577 4.7605 20.2513 4.35514 19.5838 4.07858C18.9163 3.80202 18.2009 3.65967 17.4784 3.65967C16.756 3.65967 16.0405 3.80202 15.3731 4.07858C14.7056 4.35514 14.0992 4.7605 13.5884 5.27149L12.5284 6.33149L11.4684 5.27149C10.4367 4.2398 9.03747 3.6602 7.57844 3.6602C6.11941 3.6602 4.72013 4.2398 3.68844 5.27149C2.65675 6.30319 2.07715 7.70246 2.07715 9.16149C2.07715 10.6205 2.65675 12.0198 3.68844 13.0515L4.74844 14.1115L12.5284 21.8915L20.3084 14.1115L21.3684 13.0515C21.8794 12.5407 22.2848 11.9343 22.5614 11.2668C22.8379 10.5994 22.9803 9.88398 22.9803 9.16149C22.9803 8.43901 22.8379 7.7236 22.5614 7.05614C22.2848 6.38868 21.8794 5.78225 21.3684 5.27149Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="count">0</span></button>
+                        <button class="count-btn">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.49414 2.75244L3.49414 6.75244V20.7524C3.49414 21.2829 3.70485 21.7916 4.07993 22.1667C4.455 22.5417 4.96371 22.7524 5.49414 22.7524H19.4941C20.0246 22.7524 20.5333 22.5417 20.9084 22.1667C21.2834 21.7916 21.4941 21.2829 21.4941 20.7524V6.75244L18.4941 2.75244H6.49414Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.49414 6.75244H21.4941" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16.4941 10.7524C16.4941 11.8133 16.0727 12.8307 15.3226 13.5809C14.5724 14.331 13.555 14.7524 12.4941 14.7524C11.4333 14.7524 10.4159 14.331 9.66571 13.5809C8.91557 12.8307 8.49414 11.8133 8.49414 10.7524" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="count">0</span>
+                        </button>
+                        <a href="#" class="login-btn">Login/Register</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="menu-container">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Flowers</a></li>
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">Occasions</a></li>
+                                <li><a href="#">Add on</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">INTL. Orders</a></li>
+                                <li><a href="#">ePayment</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="site">
+
+        <div class="home-banner position-relative">
+            <div class="yellow-bg"><img src="/static/images/glow.png" alt="" /></div>
+            <h2 class="pt-3">Premium</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 position-relative">
+                        <h2 class="h1 top">Flo</h2>
+                    </div>
+                    <div class="col-md-2 position-relative">
+                        <h2 class="h1 middle">w</h2>
+                    </div>
+                    <div class="col-md-5 position-relative">
+                        <h2 class="h1 bottom">ers</h2>
+                    </div>
+                </div>
+            </div>
+            <img src="/static/images/heroimg4.png" alt="" class="main-img">
+            <img src="/static/images/line.png" alt="" class="line-img">
+            
+            <div class="ban-sub">
+                <h2 class="sub-title mb-2">For all occasions</h2>
+                <img src="/static/images/line-2.png" alt="" class=""> <br>
+                <a href="#" class="btn btn-purple mt-4">Shop Now</a>
+            </div>
+        </div>
+
+        <div class="category-sec">
+            <div class="container">
+                <div class="row justify-content-between">
+
+                    {% for cat in categories %}
+                        <div class="col-auto">
+                            <a href="{% url 'categories' cat.slug  %}">
+                                <div class="cat-box">
+                                    <div class="icn">
+                                        <img src="/static/images/cat-bg.png" alt="" class="bg">
+                                        <img src="/uploads/{{cat.image}}" alt="" class="img">
+                                    </div>
+                                    <h6>{{cat.title}}</h6>
+                                </div>
+                            </a>
+                        </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="pad">
+            <div class="container position-relative">
+
+                <div class="text-center">
+                    <h2 class="mb-3">Best Selling Products</h2>
+                    <img src="/static/images/wave.png" alt="">
+                </div>
+
+                <div class="swiper best-selling-slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="pro-box">
+                                <div class="img">
+                                    <img src="/static/images/SR042.jpg" alt="">
+                                    <div class="action">
+                                        <div class="action-btns">
+                                            <a href="#">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="black"/>
+                                                    <path d="M21.0004 20.9999L16.6504 16.6499" stroke="black"/>
+                                                </svg>
+                                            </a>
+                                            <a href="#">
+                                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M21.3684 5.27149C20.8577 4.7605 20.2513 4.35514 19.5838 4.07858C18.9163 3.80202 18.2009 3.65967 17.4784 3.65967C16.756 3.65967 16.0405 3.80202 15.3731 4.07858C14.7056 4.35514 14.0992 4.7605 13.5884 5.27149L12.5284 6.33149L11.4684 5.27149C10.4367 4.2398 9.03747 3.6602 7.57844 3.6602C6.11941 3.6602 4.72013 4.2398 3.68844 5.27149C2.65675 6.30319 2.07715 7.70246 2.07715 9.16149C2.07715 10.6205 2.65675 12.0198 3.68844 13.0515L4.74844 14.1115L12.5284 21.8915L20.3084 14.1115L21.3684 13.0515C21.8794 12.5407 22.2848 11.9343 22.5614 11.2668C22.8379 10.5994 22.9803 9.88398 22.9803 9.16149C22.9803 8.43901 22.8379 7.7236 22.5614 7.05614C22.2848 6.38868 21.8794 5.78225 21.3684 5.27149Z" stroke="black" />
+                                                </svg>
+                                            </a>
+                                            <a href="#">
+                                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6.49414 2.75244L3.49414 6.75244V20.7524C3.49414 21.2829 3.70485 21.7916 4.07993 22.1667C4.455 22.5417 4.96371 22.7524 5.49414 22.7524H19.4941C20.0246 22.7524 20.5333 22.5417 20.9084 22.1667C21.2834 21.7916 21.4941 21.2829 21.4941 20.7524V6.75244L18.4941 2.75244H6.49414Z" stroke="black" />
+                                                    <path d="M3.49414 6.75244H21.4941" stroke="black" />
+                                                    <path d="M16.4941 10.7524C16.4941 11.8133 16.0727 12.8307 15.3226 13.5809C14.5724 14.331 13.555 14.7524 12.4941 14.7524C11.4333 14.7524 10.4159 14.331 9.66571 13.5809C8.91557 12.8307 8.49414 11.8133 8.49414 10.7524" stroke="black" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pro-info">
+                                    <p class="sku mb-1">SR042</p>
+                                    <h6 class="mb-1">Cappuccino Preserved...</h6>
+                                    <p class="price mb-1">SGD $88.00</p>
+                                    <a href="#">BUY NOW</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                </div>
+                <div class="best-button-next"></div>
+                <div class="best-button-prev"></div>
+
+            </div>
+        </div>
+        
+
+    </main>
+
+    
+    <footer>
+        <div class="foot-up pad">
+            <div class="container">
+                <h4 class="text-center">Newsletter</h4>
+                <p class="text-center mb-4">Register now to get updates on promotions & coupons</p>
+
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-5 newsletter">
+                        <input type="email" placeholder="Enter email">
+                        <button type="submit"><i class="fa-sharp fa-light fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="row justify-content-between foot-row">
+                            <div class="col-auto">
+                                <h6>Quick Links</h6>
+                                <ul class="foot-menu">
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms and Conditions</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-auto">
+                                <h6>Quick Links</h6>
+                                <ul class="foot-menu">
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms and Conditions</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-auto">
+                                <h6>Quick Links</h6>
+                                <ul class="foot-menu">
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms and Conditions</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-auto">
+                                <h6>Quick Links</h6>
+                                <ul class="foot-menu">
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms and Conditions</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="foot-bottom">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-auto">
+                        <p>© 2024 Singapore florist. All Rights Reserved.</p>
+                    </div>
+                    <div class="col-auto">
+                        <p>We Using Safe Payment For: <img src="/static/images/payment.png" alt=""></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+	
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="/static/js/bootstrap.js"></script>
+	<script src="/static/js/script.js"></script>
+    <script>
+        var swiper = new Swiper(".best-selling-slide", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: ".best-button-next",
+                prevEl: ".best-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>
